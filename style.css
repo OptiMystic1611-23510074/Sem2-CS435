@@ -1,0 +1,157 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body background color and background image */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative; /* Ensure relative positioning for pseudo-element */
+  background-image: url('img/pexels-tara-winstead-8378736.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Gradient overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)); /* Adjust gradient colors and opacity */
+}
+
+
+
+
+/* Navbar styles */
+nav {
+  background: linear-gradient(to right, #a6c7de, #e5e8eb); /* Gradient background */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #c31a1a;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+.card-body {
+  width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+#nlp_results {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace;
+  width: 100%; /* Fill the available horizontal space */
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+/* Main content container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(172, 226, 11, 0.9); /* Adjusted background color with opacity */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(3, 226, 242, 0.1);
+  position: relative; /* Add relative positioning */
+  z-index: 6; /* Set a higher z-index to place it above the background image */
+  border: 2px solid transparent; /* Transparent border */
+  background-image: linear-gradient(45deg, #0c98c7, #f5f4f9); /* Gradient background */
+}
+
+/* Voice-to-text section */
+.voice_to_text {
+  background-color: rgba(50, 3, 100, 0.8); /* Adjusted background color with opacity */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.card-body {
+  width: 100%; /* Ensure the card body occupies full screen width */
+}
+
+#nlp_results {
+  white-space: pre-wrap; /* Allow wrapping of text */
+  word-wrap: break-word; /* Break long words */
+  font-family: monospace; /* Use monospace font for consistent spacing */
+}
+
+
+/* Textarea styles */
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ced4da;
+  background-color: #646748;
+  background-image: linear-gradient(to right, #f7f3f3, #e7e9d9); /* Gradient background */
+  border-radius: 5px;
+  resize: none;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Button styles */
+button {
+  padding: 12px 20px;
+  background-color: #0736f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  color: #fff;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+  background-color: #2411ce;
+}
+
+/* Processed text section */
+#nlp_results {
+  background-color: #eee7e3;
+  padding: 10px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Footer styles */
+.card-body {
+  padding-bottom: 50px; /* Increase padding to create more space for processed text */
+}
+
+/* Footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #40586b, #384454); /* Gradient background */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

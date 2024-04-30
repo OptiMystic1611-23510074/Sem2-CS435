@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech-to-Text Converter</title>
+  <script src="js/jspdf.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Speech Converter</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Search bar -->
+    <form class="form-inline my-2 my-lg-0 ml-auto">
+      <!-- Search button with file selection -->
+      <label class="btn btn-outline-info my-2 my-sm-0" for="myfile" style="color: rgb(18, 17, 17); margin-right: 10px;">Search your files
+        <input type="file" id="myfile" name="myfile" accept=".pdf" style="color: aqua; display: none;" onchange="showSelectedFile(event)">
+      </label>
+    </form>
+    <div class="navbar-nav ml-4"> <!-- Added ml-4 class for left margin -->
+      <a class="nav-item nav-link active" href="#">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">OUR WORK</a>
+
+    </div>
+    <!-- End of search bar -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- Existing navbar links -->
+      <!-- ... -->
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Main Content -->
+  <div  class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Start Learning</h2>
+            <textarea id="convert_text" class="form-control mb-3" rows="5" placeholder="Converted text will appear here..."></textarea>
+            <div class="text-center">
+              <button id="start_button" class="btn btn-primary mr-2">Start Recording</button>
+              <button id="stop_button" class="btn btn-danger">Stop Recording</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-12"> <!-- Adjusted to occupy full screen width -->
+        <div class="card">
+          <div class="card-body" style="overflow-x: auto;">
+            <h3 class="text-center mb-4">Processed Text</h3>
+            <pre id="nlp_results"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-5 py-4 bg-dark text-light">
+    
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+  
+
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+    function showSelectedFile(event) {
+      const input = event.target;
+      if (input.files && input.files.length > 0) {
+        const file = input.files[0];
+        console.log("Selected file:", file.name);
+      }
+    }
+    </script>
+</body>
+</html>
